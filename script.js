@@ -345,7 +345,7 @@ function ouvrirCarte(carte) {
     if (carte === "noel") {
 
         window.location.href =
-            "noel.html";
+            "noel2026.html";
 
         return;
     }
@@ -356,7 +356,7 @@ function ouvrirCarte(carte) {
     if (carte === "anniversaire") {
 
         window.location.href =
-            "anniversaire.html";
+            "anniversaire26.html";
 
         return;
     }
