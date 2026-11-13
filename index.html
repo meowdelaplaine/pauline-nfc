@@ -5,25 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-    <title>💕 Kéké land 💕</title>
+    <title>💕 Kéké Land 💕</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- PETITES PHOTOS FLOTTANTES -->
+    <!-- ======================================= -->
+    <!-- PETITES PHOTOS FLOTTANTES               -->
+    <!-- ======================================= -->
+
     <div id="floatingPhotos"></div>
 
 
-    <!-- EN-TÊTE -->
+    <!-- ======================================= -->
+    <!-- EN-TÊTE                                 -->
+    <!-- ======================================= -->
+
     <header class="main-header">
 
         <div class="heart">💗</div>
 
         <h1>Bienvenue à Kéké Land 💕</h1>
 
-        <p>Un petit endroit rien que pour toi.</p>
+        <p>
+            Un petit endroit rien que pour toi.
+        </p>
 
         <p class="subtitle">
             De nouvelles surprises apparaîtront ici avec le temps ✨
@@ -32,14 +40,20 @@
     </header>
 
 
-    <!-- CARTES -->
+    <!-- ======================================= -->
+    <!-- CARTES                                  -->
+    <!-- ======================================= -->
+
     <main class="cards-container">
 
 
         <!-- EVERYDAY FUN -->
+
         <section class="event-card everyday-card">
 
-            <div class="card-icon">✨</div>
+            <div class="card-icon">
+                ✨
+            </div>
 
             <h2>Everyday Fun</h2>
 
@@ -54,10 +68,14 @@
         </section>
 
 
+
         <!-- PARCE QUE KÉKÉ -->
+
         <section class="event-card keke-card">
 
-            <div class="card-icon">💌</div>
+            <div class="card-icon">
+                💌
+            </div>
 
             <h2>Parce que Kéké</h2>
 
@@ -72,10 +90,14 @@
         </section>
 
 
+
         <!-- NOËL -->
+
         <section class="event-card christmas-card">
 
-            <div class="card-icon">🎄</div>
+            <div class="card-icon">
+                🎄
+            </div>
 
             <h2>Noël</h2>
 
@@ -90,10 +112,14 @@
         </section>
 
 
+
         <!-- ANNIVERSAIRE -->
+
         <section class="event-card birthday-card">
 
-            <div class="card-icon">🎂</div>
+            <div class="card-icon">
+                🎂
+            </div>
 
             <h2>Anniversaire</h2>
 
@@ -108,10 +134,14 @@
         </section>
 
 
+
         <!-- OLD CARDS -->
+
         <section class="event-card old-card">
 
-            <div class="card-icon">📜</div>
+            <div class="card-icon">
+                📜
+            </div>
 
             <h2>Old Cards</h2>
 
@@ -129,10 +159,15 @@
     </main>
 
 
-    <!-- FENÊTRE QUI S'OUVRE QUAND ON CLIQUE SUR UNE CARTE -->
+    <!-- ======================================= -->
+    <!-- EVENT OVERLAY                           -->
+    <!-- ======================================= -->
+
     <div id="eventOverlay" class="event-overlay">
 
         <div class="event-content">
+
+            <!-- BOUTON POUR FERMER -->
 
             <button
                 class="close-button"
@@ -140,14 +175,25 @@
                 ✕
             </button>
 
-            <div id="eventPage"></div>
+
+            <!--
+                LE CONTENU DE LA CARTE
+                APPARAÎTRA ICI
+            -->
+
+            <div id="eventPage">
+
+            </div>
 
         </div>
 
     </div>
 
 
-    <!-- FOOTER -->
+    <!-- ======================================= -->
+    <!-- FOOTER                                  -->
+    <!-- ======================================= -->
+
     <footer>
 
         <p>
@@ -161,8 +207,12 @@
     </footer>
 
 
-    <!-- JAVASCRIPT -->
+    <!-- ======================================= -->
+    <!-- JAVASCRIPT PRINCIPAL                    -->
+    <!-- ======================================= -->
+
     <script src="script.js"></script>
+
 
 </body>
 
