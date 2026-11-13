@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alicia's daily page!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="floatingPhotos"></div>
+    <header>
+        <h1>Bonjour Alicia!💕</h1>
+        <p>Merci d'avoir scanné ce porte clé!</p>
+        <p>Voilà quelques activité du jour..</p>
+    </header>
+    <main>
+        <section>
+            <h2>🔮 Mot du jour 🔮</h2>
+            <p id="motDuJour">
+                Clique pour découvrir ton message.
+            </p>
+            <button onclick="nouveauMessage()">
+                Clique ici!
+            </button>
+        </section>
+        <section>
+            <h2>🎮 Mini-jeu 🎮</h2>
+            <p>Une épreuve t'attend...</p>
+            <button onclick="lancerJeu()">
+                Jouer
+            </button>
+            <p id="jeu"></p>
+        </section>
+        <section>
+            <h2>🔒 Daily English Quest 🔒</h2>
+            <p>
+                Un nouveau défi anglais t'attend chaque jour..
+            </p>
+            <div id="englishStats"></div>
+            <button onclick="lancerEnglishQuest()">
+                Let's play!
+            </button>
+            
+            <div id="englishQuest"></div>
+        </section>
+    </main>
+    <footer>
+        <p>Made with ❤️ par Maumau!</p>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
