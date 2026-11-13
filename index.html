@@ -1,52 +1,151 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alicia's daily page!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>💕 Kéké land 💕</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+    <!-- Petites photos flottantes -->
     <div id="floatingPhotos"></div>
-    <header>
-        <h1>Bonjour Alicia!💕</h1>
-        <p>Merci d'avoir scanné ce porte clé!</p>
-        <p>Voilà quelques activité du jour..</p>
+
+
+    <!-- EN-TÊTE -->
+    <header class="main-header">
+
+        <div class="heart">💗</div>
+
+        <h1>Bienvenue 💕</h1>
+
+        <p>Un petit endroit rien que pour toi.</p>
+
+        <p class="subtitle">
+            De nouvelles surprises apparaîtront ici avec le temps ✨
+        </p>
+
     </header>
-    <main>
-        <section>
-            <h2>🔮 Mot du jour 🔮</h2>
-            <p id="motDuJour">
-                Clique pour découvrir ton message.
-            </p>
-            <button onclick="nouveauMessage()">
-                Clique ici!
-            </button>
-        </section>
-        <section>
-            <h2>🎮 Mini-jeu 🎮</h2>
-            <p>Une épreuve t'attend...</p>
-            <button onclick="lancerJeu()">
-                Jouer
-            </button>
-            <p id="jeu"></p>
-        </section>
-        <section>
-            <h2>🔒 Daily English Quest 🔒</h2>
+
+
+    <!-- CARTES -->
+    <main class="cards-container">
+
+
+        <!-- ANNIVERSAIRE -->
+        <section class="event-card">
+
+            <div class="card-icon">🎂</div>
+
+            <h2>Birthday</h2>
+
             <p>
-                Un nouveau défi anglais t'attend chaque jour..
+                Une petite surprise t'attend...
             </p>
-            <div id="englishStats"></div>
-            <button onclick="lancerEnglishQuest()">
-                Let's play!
+
+            <button onclick="ouvrirCarte('anniversaire')">
+                Ouvrir 💕
             </button>
-            
-            <div id="englishQuest"></div>
+
         </section>
+
+
+        <!-- JUST BECAUSE -->
+        <section class="event-card">
+
+            <div class="card-icon">💌</div>
+
+            <h2>Just because</h2>
+
+            <p>
+                Pas besoin d'une occasion particulière.
+            </p>
+
+            <button onclick="ouvrirCarte('justbecause')">
+                Découvrir ✨
+            </button>
+
+        </section>
+
+
+        <!-- MEMORIES -->
+        <section class="event-card">
+
+            <div class="card-icon">📸</div>
+
+            <h2>Memories</h2>
+
+            <p>
+                Quelques souvenirs qu'on garde ici.
+            </p>
+
+            <button onclick="ouvrirCarte('memories')">
+                Voir 💗
+            </button>
+
+        </section>
+
+
+        <!-- FUTURE CARTE -->
+        <section class="event-card locked-card">
+
+            <div class="card-icon">🔒</div>
+
+            <h2>Coming soon...</h2>
+
+            <p>
+                Quelque chose se prépare 👀
+            </p>
+
+            <button disabled>
+                Bientôt
+            </button>
+
+        </section>
+
+
     </main>
+
+
+    <!-- FENÊTRE QUI S'OUVRE QUAND ON CLIQUE SUR UNE CARTE -->
+    <div id="eventOverlay" class="event-overlay">
+
+        <div class="event-content">
+
+            <button
+                class="close-button"
+                onclick="fermerCarte()">
+                ✕
+            </button>
+
+            <div id="eventPage"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
     <footer>
-        <p>Made with ❤️ par Maumau!</p>
+
+        <p>
+            Made with ❤️ par Maumau
+        </p>
+
+        <p class="tiny-text">
+            more coming soon...
+        </p>
+
     </footer>
-<script src="script.js"></script>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
 </body>
+
 </html>
