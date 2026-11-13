@@ -1,1 +1,302 @@
+/* ======================================== */
+/* PARAMÈTRES GÉNÉRAUX                      */
+/* ======================================== */
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    padding: 20px 16px 40px;
+    overflow-x: hidden;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4b3542;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(255, 210, 230, 0.65),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(214, 206, 255, 0.75),
+            transparent 40%
+        ),
+        linear-gradient(
+            145deg,
+            #fff6fa,
+            #f5efff
+        );
+}
+
+
+/* ======================================== */
+/* EN-TÊTE                                  */
+/* ======================================== */
+
+.main-header {
+    position: relative;
+    z-index: 5;
+
+    max-width: 520px;
+    margin: 10px auto 30px;
+    padding: 25px 20px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 28px;
+
+    box-shadow:
+        0 12px 30px rgba(104, 73, 103, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.main-header .heart {
+    margin-bottom: 8px;
+    font-size: 38px;
+
+    animation: heartBeat 2s ease-in-out infinite;
+}
+
+.main-header h1 {
+    margin-bottom: 10px;
+
+    font-size: clamp(28px, 8vw, 40px);
+    line-height: 1.1;
+    color: #9c4f76;
+}
+
+.main-header p {
+    margin-top: 6px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.main-header .subtitle {
+    color: #826b79;
+    font-size: 14px;
+}
+
+
+/* ======================================== */
+/* CONTENEUR DES CARTES                     */
+/* ======================================== */
+
+.cards-container {
+    position: relative;
+    z-index: 5;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+
+    width: 100%;
+    max-width: 520px;
+
+    margin: 0 auto;
+}
+
+
+/* ======================================== */
+/* STRUCTURE COMMUNE DES CARTES             */
+/* ======================================== */
+
+.event-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    min-height: 220px;
+    padding: 28px 22px;
+
+    text-align: center;
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 15px 32px rgba(76, 47, 68, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.event-card:active {
+    transform: scale(0.98);
+}
+
+.event-card h2 {
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: 12px;
+
+    font-size: 26px;
+    line-height: 1.2;
+}
+
+.event-card p {
+    position: relative;
+    z-index: 2;
+
+    max-width: 330px;
+    margin: 0 auto 22px;
+
+    font-size: 15px;
+    line-height: 1.55;
+}
+
+.card-icon {
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: 12px;
+    font-size: 42px;
+}
+
+.event-card button {
+    position: relative;
+    z-index: 3;
+
+    min-width: 145px;
+    min-height: 46px;
+
+    padding: 12px 22px;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 999px;
+
+    cursor: pointer;
+
+    box-shadow: 0 7px 16px rgba(50, 32, 46, 0.18);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+.event-card button:active {
+    transform: scale(0.94);
+    box-shadow: 0 3px 8px rgba(50, 32, 46, 0.16);
+}
+
+
+/* ======================================== */
+/* EVERYDAY FUN                             */
+/* ======================================== */
+
+.everyday-card {
+    color: #493b68;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255, 242, 130, 0.9) 0 7%,
+            transparent 8%
+        ),
+        radial-gradient(
+            circle at 85% 25%,
+            rgba(255, 148, 206, 0.75) 0 6%,
+            transparent 7%
+        ),
+        radial-gradient(
+            circle at 75% 85%,
+            rgba(120, 215, 255, 0.8) 0 8%,
+            transparent 9%
+        ),
+        linear-gradient(
+            145deg,
+            #fff2a6,
+            #ffb7dd 48%,
+            #b9e8ff
+        );
+
+    border: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+.everyday-card::before {
+    content: "✦  ★  ✿  ✦";
+    position: absolute;
+    top: 15px;
+    right: 18px;
+
+    z-index: 1;
+
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 18px;
+    letter-spacing: 5px;
+
+    transform: rotate(7deg);
+}
+
+.everyday-card h2 {
+    color: #624886;
+}
+
+.everyday-card button {
+    color: white;
+    background: linear-gradient(135deg, #8b69d9, #e05ba7);
+}
+
+
+/* ======================================== */
+/* PARCE QUE KÉKÉ                           */
+/* ======================================== */
+
+.keke-card {
+    color: #5d304b;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(255, 255, 255, 0.6),
+            transparent 18%
+        ),
+        linear-gradient(
+            145deg,
+            #ffd8e7,
+            #f5b5d0 48%,
+            #e3c7ff
+        );
+
+    border: 3px solid rgba(255, 255, 255, 0.75);
+}
+
+.keke-card::before {
+    content: "♡";
+    position: absolute;
+    top: -28px;
+    right: -5px;
+
+    z-index: 1;
+
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 145px;
+
+    transform: rotate(15deg);
+}
+
+.keke-card::after {
+    content: "💕";
+    position: absolute;
+   
